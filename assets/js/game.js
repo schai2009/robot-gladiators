@@ -87,7 +87,7 @@ for (var i = 0; i < enemyNames.length; i++) {
     // debugger;
 
     // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
-    fight(pickedEnemyName);
+    fight(enemyNames);
   }
   // if player isn't alive, stop the game
   else {
@@ -95,3 +95,25 @@ for (var i = 0; i < enemyNames.length; i++) {
     break;
   }
 }
+var startGame = function() {
+  for (var i = 0; i < enemyNames.length; i++) {
+    if (playerHealth > 0) {
+      window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
+
+      var pickedEnemyName = enemyNames [i]
+
+      enemyHealth = 50
+
+      fight(pickedEnemyName);
+    }else {
+      window.alert("you have lost your robot in battle! Game Over!");
+      break;
+    }
+  }
+};
+// play again
+startGame()
+
+endgame()
+
+shop()
