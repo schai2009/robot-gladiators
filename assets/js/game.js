@@ -82,7 +82,7 @@ var startGame = function() {
       var pickedEnemyName = enemyNames[i];
 
       // reset enemyHealth before starting new fight
-      enemyHealth = 50;
+      enemyHealth = randomNumber(40, 60);
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
